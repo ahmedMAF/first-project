@@ -24,7 +24,14 @@ Route::get('/about' , function(){
 });
 
 Route::post('/about' , function(){
-    $name = request("n");
-    $age = request("a");
+    //$name = request("n");
+    //$age = request("a");
+    $name = $_POST['n'];
+    $age = $_POST['a'];
     return view('about' , compact("name" , "age"));
+});
+
+Route::get('/tasks', function () {
+    $task = ["task1" , "task2" , "task3"];
+    return view('tasks' , compact("task"));
 });
