@@ -32,6 +32,6 @@ Route::post('/about' , function(){
 });
 
 Route::get('/tasks', function () {
-    $task = ["task1" , "task2" , "task3"];
+    $task = ["task1" , "task2" , "task3" , "task4"];
     return view('tasks' , compact("task"));
 });
