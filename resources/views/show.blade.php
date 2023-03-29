@@ -7,11 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>your tasks</h1>
-    <ul>
-        @foreach ($task as $x => $item)
-            <li> <a href={{"show/".$x}}> {{$item}}</a></li>
-        @endforeach
-    </ul>
+    {{ $item }}
 </body>
 </html>

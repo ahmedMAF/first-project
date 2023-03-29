@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>your tasks</h1>
+    <h1>Your tasks from data base</h1>
     <ul>
-        @foreach ($task as $x => $item)
-            <li> <a href={{"show/".$x}}> {{$item}}</a></li>
+        @foreach ($task as $item)
+            <li> <a href={{"showDB/".$item->id}}> {{$item->name}}</a> </li>
         @endforeach
     </ul>
 </body>

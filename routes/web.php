@@ -35,3 +35,19 @@ Route::get('/tasks', function () {
     $task = ["task1" , "task2" , "task3" , "task4"];
     return view('tasks' , compact("task"));
 });
+
+Route::get('show/{index}', function ($index) {
+    $task = ["task1" , "task2" , "task3" , "task4"];
+    $item = $task[$index];
+    return view('show' , compact("item"));
+});
+
+Route::get('/dataBase' , function(){
+    $task = DB::table('tasks')->get();
+    return view('taskDB', compact("task"));
+});
+
+Route::get('/showDB/{id}' , function($id){
+    $task = DB::table('tasks')->find($id);
+    return view('showDB', compact("task"));
+});

@@ -7,11 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>your tasks</h1>
-    <ul>
-        @foreach ($task as $x => $item)
-            <li> <a href={{"show/".$x}}> {{$item}}</a></li>
-        @endforeach
-    </ul>
+    <h1>{{$task->id}}</h1>
+    <h1>{{$task->name}}</h1>
+    <h1>{{$task->created_at}}</h1>
+    <h1>{{$task->updated_at}}</h1>
 </body>
 </html>
